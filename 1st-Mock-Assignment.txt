@@ -1,0 +1,227 @@
+**String1="abcdefghijklmnopqrstuvwxyz"
+
+1. Extract every 3rd character starting from index 2
+String1[2::3]
+'cfilorux'
+
+2. Extract characters from index 20 to 5 using slicing 
+String1[19:4:-1]
+'tsrqponmlkjihgf'
+
+3. Reverse only characters between index 5 and 20
+
+4. Extract alternate characters from the second half 
+String1[13: :2]
+'nprtvxz' 
+
+5. Remove first 5 and last 5 characters, then reverse the result
+String1[-5:-22:-1]
+'vutsrqponmlkjihgf'
+
+**String 2: "pythonprogramminglanguage"
+
+6. Reverse only "programming"
+String2[-9:-20:-1]
+'gnimmargorp'
+
+7. Extract "python" using negative indexes only
+String2[-25:-19:]
+'python'
+
+8. Extract "language" using slicing without counting indexes
+String2[17::]
+'language'
+
+9. Reverse the string but keep "python" in correct order
+String2[:6:] + String2[-1:-20:-1]
+'pythonegaugnalgnimmargorp'
+
+10. Print characters from index -10 to -1 with step 2
+String2[-10:-1:2]
+'nlnug'
+
+**String 3: "datastructuresandalgorithms"
+
+11. Reverse only the middle word
+String3[-11:-14:-1]
+'dna'
+
+12. Extract characters from index 5 to -10
+String3[5:-10:]
+'tructuresand'
+
+13. Print every 4th character in reverse order
+String3[-1:-28:-4]
+'silaurt'
+
+14. Reverse the string except first 3 and last 3 characters
+String3[-4:-25:-1]
+'tirogladnaserutcurtsa'
+
+
+15. Split the string into 3 equal parts using slicing
+String3[:9:] + ' ' + String3[9:18:] + ' ' + String3[18::]
+'datastruc turesanda lgorithms'
+
+**String 4: "artificialintelligence"
+
+16. Reverse only "intelligence"
+String4[21:9:-1]
+'ecnegilletni'
+
+17. Extract characters between the two words in reverse
+String4[-13:-23:-1] + ' ' + String4[21:9:-1]
+'laicifitra ecnegilletni'
+
+18. Extract characters so output starts with 'i' and ends with 'e'
+String4[10::]
+'intelligence'
+
+19. Reverse the first half and keep second half unchanged
+String4[-13:-23:-1] + String4[10::]
+'laicifitraintelligence'
+
+20. Extract alternate characters in reverse order
+String4[len(String4)-1 :: -1]
+'ecnegilletnilaicifitra'
+
+**String 5: "machinelearningmodels"
+
+21. Reverse "learning" using negative slicing
+String5[-7:-15:-1]
+'gninrael'
+
+22. Remove "machine" and reverse remaining string
+String5[len(String5):6:-1]
+'sledomgninrael'
+
+23. Extract characters from index -15 to -5
+String5[-15:-5:]
+'elearningm'
+
+24. Reverse string in chunks of 2 characters
+result=(String5[0:2][::-1] + String5[2:4][::-1] + String5[4:6][::-1] + String5[6:8][::-1] + String5[8:10][::-1] + String5[10:12][::-1] + String5[12:14][::-1] + String5[14:16][::-1] + String5[16:18][::-1] + String5[18:20][::-1] + String5[20:22][::-1])               
+result           
+'amhcnileaenrnimgdoles'
+
+25. Swap first and last word using slicing
+result=(String5[-1:-2:-1] + String5[1:20:] + String5[0:1:])
+                 
+result
+                 
+'sachinelearningmodelm'
+
+**String 6: "computernetworksandsecurity"
+
+26. Reverse only "networks"
+String6[15:7:-1]
+'skrowten'
+
+27. Extract "security" using step value
+String6[19:len(String6):1]
+'security'
+
+28. Reverse string but keep first 4 characters unchanged
+String6[:4:] + String6[len(String6):3:-1]
+'compytirucesdnaskrowtenretu'
+
+29. Extract characters at prime number indexes (logic-based)
+String6[0:1:] + String6[2:3:] + String6[3:4:] + String6[5:6:] + String6[7:8:] + String6[11:12:] + String6[13:14:] + String6[17:18:] + String6[19:20:] + String6[23:24:]
+'cmptrwrnsr'
+
+30. Reverse the string except vowels
+String6[25:len(String6):][::-1] + String6[23:24:][::-1] + String6[21:22:][::-1] + String6[17:20:][::-1] + String6[13:16:][::-1] + String6[10:12:][::-1] + String6[7:9:][::-1] + String6[5:6:][::-1] + String6[2:4:][::-1] + String6[0:1:][::-1]
+                                                                                                                                                                                                                        
+'ytrcsdnskrwtnrtpmc'
+
+**String 7: "objectorientedprogramming"
+
+31. Reverse "oriented"
+String7[13:5:-1]                                                                                                                                                                                                                        
+'detneiro'
+
+32. Extract characters from index -20 to -5 in reverse
+String7[-20:-5:]                                                                                                                                                                                                                        
+'torientedprogra'
+
+33. Keep only first and last 5 characters, reverse middle
+String7[0:5:] + String7[19:4:-1] + String7[20:len(String7):]                                                                                                                                                                                                                        
+'objecargorpdetneirotmming'
+
+34. Reverse the string starting from index 10 till end
+String7[len(String7):10:-1]                                                                                                                                                                                                                      
+'gnimmargorpdet'
+
+35. Extract characters at indexes multiple of 3
+String7[::3]                                                                                                                                                                                                                        
+'oeoeerrmg'
+
+**String 8: "datascienceandanalytics"
+
+36. Reverse only second half
+String8[len(String8):11:-1]                                                                                                                                                                                                                        
+'scitylanadn'
+
+37. Extract characters from index 3 to -3 skipping 2 characters
+String8[3:-3:2]                                                                                                                                                                                                                        
+'acecadnlt'
+
+38. Reverse string but keep middle word intact
+String8[len(String8):13:-1] + String8[11:14:] + String8[10::-1]                                                                                                                                                                                                                        
+'scitylanaandecneicsatad'
+
+39. Extract characters so output length is exactly half of string
+String8[0:len(String8)//2:]
+'datascience'
+
+40. Reverse string except the word "and"
+String8[len(String8):13:-1] + String8[11:14:] + String8[10::-1]                                                                                                                                                                                                                        
+'scitylanaandecneicsatad'
+
+
+String 9: "fullstackdevelopment"
+
+41. Reverse "stack"
+String9[8:3:-1]
+'kcats'
+
+42. Extract characters from index -8 to -1 in reverse order
+String9[-1:-8:-1]
+'tnempol'
+
+43. Reverse first and last 6 characters separately
+String9[5::-1] + ' ' + String9[len(String9):13:-1]
+'tslluf tnempo'
+
+44. Extract every second character but only from reversed string
+String9[len(String9)::-2]
+'teplvdctlu'
+
+45. Swap halves of the string using slicing
+String9[10::] + String9[:10:]
+'evelopmentfullstackd'
+
+
+String 10: "cybersecurityengineering"
+46. Reverse only "security"
+String10[12:4:-1]
+'ytiruces'
+
+47. Extract characters from index 5 to end in reverse order
+String10[len(String10):4:-1]
+'gnireenigneytiruces'
+
+48. Keep first and last character same, reverse everything in between
+String10[0:1:] + String10[26:0:-1] + String10[23::]
+'cgnireenigneytirucesrebyg'
+
+49. Extract alternate characters from both ends
+String10[::2] + " " + String10[len(String10)::-2]
+'cbreuiyniern giengetrcsey'
+
+50. Check whether string becomes palindrome after removing first and last 3 characters
+String10[3:21:]
+'ersecurityengineer'
+
+
+
