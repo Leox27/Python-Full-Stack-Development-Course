@@ -1,0 +1,7 @@
+#a=float(input("Enter the number 1:"))
+#b=float(input("Enter the number 2:"))
+#price=eval(input("Enter price: "))
+coll=eval(input("Enter collection: "))
+print(type(price))
+print(type(coll))
+#print(a+b)
