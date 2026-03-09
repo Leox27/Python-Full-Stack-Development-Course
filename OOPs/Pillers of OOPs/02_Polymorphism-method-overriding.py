@@ -64,3 +64,44 @@ Dog is eating bones
 Meow Meow Meow
 Cat is eating fish
 '''
+
+##Using Inheritance
+
+class Shape:
+    def area(self):
+        return 0
+
+class Rectangle(Shape):
+    def __init__(self,length,width):
+        self.length=length
+        self.width=width
+
+    def area(self):
+        print("Area of Rectangle: ",self.length*self.width)
+
+class Circle(Shape):
+    def __init__(self,radius):
+        self.radius=radius
+
+    def area(self):
+        print("Area of circle: ", 3.14*self.radius*self.radius)
+
+#Monkey patch
+def new_circle_area(self):
+    print("Monkey patched area: ", 3.14*self.radius*self.radius)
+Circle.area = new_circle_area
+
+circle = Circle(10)
+rect = Rectangle(4,6)
+
+# using loop to call area method of both classes
+shapes = [Circle(10), Rectangle(4,6)]
+
+for a in shapes:
+    a.area()
+
+'''
+>>>
+Monkey patched area:  314.0
+Area of Rectangle:  24
+'''
