@@ -1,34 +1,37 @@
 #Task: create relational class with magic methods related to relational operators
 class Relational:
-    def __init__(self, a):
-        self.a=a
-    
-    def __equalto__(self, other):
-        self.a == other.a
+    def __init__(self, x):
+        self.x = x
 
-    def __notequalto__(self, other):
-        self.a != other.a
+    def __lt__(self, other):
+        return self.x < other.x
 
-    def __lessthan__(self, other):
-        self.a < other.a
+    def __gt__(self, other):
+        return self.x > other.x
 
-    def __greaterthan__(self, other):
-        self.a > other.a
+    def __le__(self, other):
+        return self.x <= other.x
 
-    def __lessthanorequalto__(self, other):
-        self.a <= other.a
-    
-    def __greaterthanorequalto__(self, other):
-        self.a >= other.a
+    def __ge__(self, other):
+        return self.x >= other.x
+
+    def __eq__(self, other):
+        return self.x == other.x
 
 ob1 = Relational(10)
 ob2 = Relational(20)
 
-print(ob1==ob2)
-print(ob1!=ob2)
+print(ob1 < ob2)
+print(ob1 > ob2)
+print(ob1 <= ob2)
+print(ob1 >= ob2)
+print(ob1 == ob2)
 
 '''
 >>>
+True
 False
 True
+False
+False
 '''
