@@ -4,9 +4,8 @@
 def decor(f):
     def wrapper_or_inner():
         print('Coming 3-times')
-        f()
-        f()
-        f()
+        for i in range(1, 4):
+            f()
     return wrapper_or_inner
 
 @decor
@@ -90,9 +89,9 @@ Total count of user2: 3
 def decor(role):
     def inner(f):
         def wrapper():
-            if role == "admin":
-                print("Good Morning Admin")
-            f()
+            if f.__name__ == 'Admin':
+                f()
+                print("Good Morning")
         return wrapper
     return inner
 
@@ -107,7 +106,6 @@ user1()
 Admin()
 '''
 >>>
-I am user1
 Good Morning Admin
 Hello! I am Admin
 '''
