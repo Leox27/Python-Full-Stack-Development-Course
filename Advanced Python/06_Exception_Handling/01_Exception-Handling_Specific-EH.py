@@ -1,4 +1,6 @@
-###Iterator
+
+###Specific Exception Handling
+
 '''
 #syntax
 try:
@@ -36,7 +38,6 @@ Enter the value: 6.9
 '''
 
 ##3. WAP to create one dictionary of student which name & marks of them. Ask the user to enter the name and display the marks.(Handle key error)
-
 try:
     d3 = {'Suraj':90, 'Sudarshan':51, 'Varun':70, 'Mayur':99, 'Sohel':65}
     s_name = input('Enter the Student name: ')
@@ -49,3 +50,4 @@ except KeyError:
 Enter the Student name: Sudarshan
 Sudarshan : 51
 '''
+
