@@ -273,20 +273,89 @@ Fetching from cache...
 ##5. Create a decorator that logs function calls into a file.
 def log_function(f):
     def wrapper(*args):
+        with open(r"X:\GitHub\QSpider\Python Full Stack Development\Advanced Python\03_log.txt", "a") as file:
+            file.write(f"Function {f.__name__} called with args: {args}\n")
+            file.close()
+        f(*args)
+        print('Entry has been saved...!')
+    return wrapper
 
-        file = open("log.txt", "a")
-        file.write(f.__name__, args)
-        file.close()
+@log_function
+def user1(*args):
+    pass
+user1('Save my Entry')
+'''
+>>>
+Entry has been saved...!
+'''
 
 ##6. Create a decorator that checks if input string is not empty.
+def empty_check(f):
+    def wrapper(string):
+        if bool(string) == True:
+            print('Input string is not empty')
+            return f(string)
+        else:
+            print('Input string is empty')
+    return wrapper
+
+@empty_check
+def user1(string):
+    print(f'String is: {string}')
+user1('Kashinath Date')
+'''
+>>>
+String is: Kashinath Date
+'''
 
 ##7. Create a decorator that retries a function 3 times if it fails.
+def retry(f):
+    def wrapper(*args, **kwargs):
+        for i in range(3):
+            try:
+                return f(*args, **kwargs)
+            except Exception as e:
+                print(f"Attempt {i+1} failed")
+        print("All 3 attempts failed!")
+    return wrapper
+
+@retry
+def user1(*args):
+    print('Hello! I am user 1')
+user1()
+'''
+>>>
+Hello! I am user 1
+'''
 
 ##8. Create a decorator that rounds off the return value to 2 decimal places.
+def round_off(f):
+    def wrapper(*args, **kwargs):
+        result = f(*args, **kwargs)
+        if isinstance(result, (int, float)):
+            return round(result, 2)
+        else:
+            print("Return value is not a number")
+            return result
+    return wrapper
+
+@round_off
+def user1(num):
+    print('Hello! I am user 1')
+    return num/3   # return a number
+print(user1(678.67867))
+print(user1(7))
+'''
+>>>
+226.23
+Hello! I am user 1
+2.33
+'''
 
 ###Hard Practice Questions for Decorators
 
 ##1. Create a decorator that measures execution time and logs slow functions (>1 sec).
+
 
 ##2. Create a decorator that limits API calls (rate limiting) — max 3 calls per 10 seconds.
 
