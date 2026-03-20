@@ -1,5 +1,5 @@
-from Packages import username, password
 
+from Packages import username, password
 
 def usname(un):
     if '_' in un:
@@ -7,7 +7,10 @@ def usname(un):
     else:
         return "Invalid username"
 print(usname(username.un))
-
+'''
+>>>
+myr_x27
+'''
 
 def passd(passw):
     if len(passw) != 8:
@@ -29,18 +32,7 @@ def passd(passw):
         return "Invalid password"
 print(passd(password.pwd))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
+'''
+>>>
+Valid password
+'''
