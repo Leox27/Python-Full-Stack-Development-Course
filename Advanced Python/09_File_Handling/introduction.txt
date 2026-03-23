@@ -1,0 +1,6 @@
+I am Mayur Jadhav. I am originally from Solapur, currently living in Pune.
+Currently I am pursuing Btech in E&TC at BMIT college.
+Along with my degree I have enrolled in the skill development courses at QSpider.
+My technical skills are Python, SQL in MySQL & Oracle, etc.
+I have some projects that is in my academics I have completed a project on the Smart Car Parking System and i have some self-paced projects that are Weather forecasting using FB Prophet, Classification of Dogs vs cats using CNN, Diabattes data prediction using KNN
+My career objective is i want to get a job in a reputated comapany and work with professionals with real datasets
