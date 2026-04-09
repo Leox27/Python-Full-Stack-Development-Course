@@ -1,6 +1,6 @@
 
 ###Easy For Loop Problems
-"""
+
 ##1. Write a program to print numbers from 1 to 50 using a for loop.
 for i in range(1, 51): #range(start, stop+1, step) - generates numbers from start to stop-1, excluding stop
   print(i, end=' ')
@@ -139,7 +139,7 @@ Enter one character: g
 4
 '''
 
-"""
+
 ##10. Print all elements of a list in reverse order.
 list10 = [7, 2, 9, 4, 27]
 for i in range(len(list10)-1, -1, -1):
