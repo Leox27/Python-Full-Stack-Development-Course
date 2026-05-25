@@ -99,3 +99,57 @@ print(Leaders([16, 17, 4, 3, 5, 2]))
 [17, 5, 2]
 '''
 
+'''
+Question 3:
+Find all contiguous subarrays whose product is less than or equal to k.
+
+* You are given an array of positive integers and an integer k.
+* A subarray is a contiguous part of the array.
+* Generate all possible contiguous subarrays.
+* For each subarray, calculate the product of its elements.
+* Select only those subarrays whose product is less than or equal to k.
+* Print all such subarrays and also print their total count.
+
+Input:
+arr = [1, 2, 3, 4, 5]
+k = 10
+
+Output:
+8
+[1], [2], [3], [4], [5], [1,2], [1,2,3], [2,3]
+
+Input:
+arr = [2, 5, 3]
+k = 10
+
+Output:
+4
+[2], [5], [3], [2,5]
+
+Constraints:
+* Use only loops for generating subarrays
+* Do not use inbuilt functions for subarray generation
+* Each subarray must be contiguous
+* The product should be calculated manually
+* Ensure correct handling of all possible subarrays
+'''
+
+from typing import List
+
+def contiguous_subarray(arr: List[int], k: int) -> List[List[int]]:
+    result = []
+    for i in range(len(arr)):
+        product = 1
+        for j in range(i, len(arr)):
+            product *= arr[j]
+            if product <= k:
+                result.append(arr[i:j+1])
+            else:
+                break
+
+    return result
+print(contiguous_subarray([1, 2, 3, 4, 5], 10))
+'''
+[[1], [1, 2], [1, 2, 3], [2], [2, 3], [3], [4], [5]]
+'''
+
